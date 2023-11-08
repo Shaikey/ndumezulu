@@ -1,0 +1,457 @@
+﻿<% include ../partials/headerBack %>
+
+	<!-- content-section-starts -->
+		<div class="content">
+<div class="women_main">
+	<!-- start content -->
+	<div class="catalog">				
+			<div id="tabs" class="tabs">
+					
+						<div class="graph">
+							<nav>
+								<ul>
+									<li class="tab-current"><a href="#section-1" class="icon-shop"><span>All</span></a></li>
+									<li><a href="#section-2" class="icon-cup"><span>Dresses</span></a></li>
+									<li><a href="#section-3" class="icon-food"><span>Suits</span></a></li>
+									<li><a href="#section-4" class="icon-lab"><span>Hats</span></a></li>
+									<li><a href="#section-5" class="icon-truck"><span>Shirts</span></a></li>
+									<li><a href="#section-6" class="icon-food"><span>Jackets</span></a></li>
+									<li><a href="#section-7" class="icon-lab"><span>Trousers</span></a></li>
+									<li><a href="#section-8" class="icon-truck"><span>Skirts</span></a></li>
+								</ul>
+							</nav>
+								<div class="content tab">
+									<section id="section-1" class="content-current">
+										<div class="w_content">
+											<div class="women">
+												<a href="#" class="item-total"><h4><span class="item-no">0</span> - items</h4></a>
+												<ul class="w_nav">
+															<li>Sort : </li>
+															 <li><a class="active" href="#">popular</a></li> |
+															 <li><a href="#">new </a></li> |
+															 <li><a href="#">discount</a></li> |
+															 <li><a href="#">price: Low High </a></li> 
+															 <div class="clear"></div>	
+												 </ul>
+												 <div class="clearfix"></div>	
+											</div>
+											<!-- grids_of_4 -->
+											<div class="grids_of_4">
+												<% if(products) { %>
+													<% products.forEach(function(doc) { %>
+														<div class="col-sm-3">
+															<div class="content_box"><a href="">
+																	<img src="../images/index/<%= doc.P_Item %>.jpg" class="img-responsive" alt="">
+																	</a>
+																<h4><a><%= doc.P_Name %></a></h4>
+																<p data-max-characters="65"><%= doc.P_Desc %></p>
+																<div class="grid_1 simpleCart_shelfItem">
+																
+																<div class="price-tag"><span class="item_price"><h6>ONLY R<%= doc.P_Price %></h6></span></div>
+																<div class="item_add"><span class="item_price"><a id="viewModalItem" data-toggle="modal" data-target="#myViewModal">view</a></span></div>
+																</div>
+															</div>
+														</div>
+													<% }) %>
+												<% } %>
+												<div class="clearfix"></div>
+											</div>
+											<!-- end grids_of_4 -->
+										</div>
+									   <div class="clearfix"></div>
+									</section>
+
+									<section id="section-2">
+										<div class="w_content">
+											<div class="women">
+												<a href="#" class="item-total"><h4><span class="item-no">0</span> - items</h4></a>
+												<ul class="w_nav">
+															<li>Sort : </li>
+															 <li><a class="active" href="#">popular</a></li> |
+															 <li><a href="#">new </a></li> |
+															 <li><a href="#">discount</a></li> |
+															 <li><a href="#">price: Low High </a></li> 
+															 <div class="clear"></div>	
+												 </ul>
+												 <div class="clearfix"></div>	
+											</div>
+											<!-- grids_of_4 -->
+											<div class="grids_of_4">
+												<% if(products) { %>
+													<% products.forEach(function(doc) { %>
+														<% if (doc.P_Catalog == 'Dress') { %>
+															<div class="col-sm-3">
+																<div class="content_box"><a href="">
+																	<img src="../images/index/<%= doc.P_Item %>.jpg" class="img-responsive" alt="">
+																	</a>
+																	<h4><a><%= doc.P_Name %></a></h4>
+																	<p data-max-characters="65"><%= doc.P_Desc %></p>
+																	<div class="grid_1 simpleCart_shelfItem">
+																	
+																	<div class="price-tag"><span class="item_price"><h6>ONLY R<%= doc.P_Price %></h6></span></div>
+																	<div class="item_add"><span class="item_price"><a id="viewModalItem" data-toggle="modal" data-target="#myViewModal">view</a></span></div>
+																	</div>
+																</div>
+															</div>
+														<% } %>
+													<% }) %>
+												<% } %>
+												<div class="clearfix"></div>
+											</div>
+										</div>
+									   <div class="clearfix"></div>
+									</section>
+
+									<section id="section-3">
+										<div class="w_content">
+											<div class="women">
+												<a href="#" class="item-total"><h4><span class="item-no">0</span> - items</h4></a>
+												<ul class="w_nav">
+															<li>Sort : </li>
+															 <li><a class="active" href="#">popular</a></li> |
+															 <li><a href="#">new </a></li> |
+															 <li><a href="#">discount</a></li> |
+															 <li><a href="#">price: Low High </a></li> 
+															 <div class="clear"></div>	
+												 </ul>
+												 <div class="clearfix"></div>	
+											</div>
+											<!-- grids_of_4 -->
+											<div class="grids_of_4">
+												<% if(products) { %>
+													<% products.forEach(function(doc) { %>
+														<% if (doc.P_Catalog == 'Suit') { %>
+															<div class="col-sm-3">
+																<div class="content_box"><a href="">
+																	<img src="../images/index/<%= doc.P_Item %>.jpg" class="img-responsive" alt="">
+																	</a>
+																	<h4><a><%= doc.P_Name %></a></h4>
+																	<p data-max-characters="65"><%= doc.P_Desc %></p>
+																	<div class="grid_1 simpleCart_shelfItem">
+																	
+																	<div class="price-tag"><span class="item_price"><h6>ONLY R<%= doc.P_Price %></h6></span></div>
+																	<div class="item_add"><span class="item_price"><a id="viewModalItem" data-toggle="modal" data-target="#myViewModal">view</a></span></div>
+																	</div>
+																</div>
+															</div>
+														<% } %>
+													<% }) %>
+												<% } %>
+												<div class="clearfix"></div>
+											</div>
+										</div>
+									   <div class="clearfix"></div>
+									</section>
+
+									<section id="section-4">
+										<div class="w_content">
+											<div class="women">
+												<a href="#" class="item-total"><h4><span class="item-no">0</span> - items</h4></a>
+												<ul class="w_nav">
+															<li>Sort : </li>
+															 <li><a class="active" href="#">popular</a></li> |
+															 <li><a href="#">new </a></li> |
+															 <li><a href="#">discount</a></li> |
+															 <li><a href="#">price: Low High </a></li> 
+															 <div class="clear"></div>	
+												 </ul>
+												 <div class="clearfix"></div>	
+											</div>
+											<!-- grids_of_4 -->
+											<div class="grids_of_4">
+												<% if(products) { %>
+													<% products.forEach(function(doc) { %>
+														<% if (doc.P_Catalog == 'Hat') { %>
+															<div class="col-sm-3">
+																<div class="content_box"><a href="">
+																	<img src="../images/index/<%= doc.P_Item %>.jpg" class="img-responsive" alt="">
+																	</a>
+																	<h4><a><%= doc.P_Name %></a></h4>
+																	<p data-max-characters="65"><%= doc.P_Desc %></p>
+																	<div class="grid_1 simpleCart_shelfItem">
+																	
+																	<div class="price-tag"><span class="item_price"><h6>ONLY R<%= doc.P_Price %></h6></span></div>
+																	<div class="item_add"><span class="item_price"><a id="viewModalItem" data-toggle="modal" data-target="#myViewModal">view</a></span></div>
+																	</div>
+																</div>
+															</div>
+														<% } %>
+													<% }) %>
+												<% } %>
+											</div>
+											<div class="clearfix"></div>
+										</div>
+									   <div class="clearfix"></div>
+									</section>
+
+									<section id="section-5">
+										<div class="w_content">
+											<div class="women">
+												<a href="#" class="item-total"><h4><span class="item-no">0</span> - items</h4></a>
+												<ul class="w_nav">
+															<li>Sort : </li>
+															 <li><a class="active" href="#">popular</a></li> |
+															 <li><a href="#">new </a></li> |
+															 <li><a href="#">discount</a></li> |
+															 <li><a href="#">price: Low High </a></li> 
+															 <div class="clear"></div>	
+												 </ul>
+												 <div class="clearfix"></div>	
+											</div>
+											<!-- grids_of_4 -->
+											<div class="grids_of_4">
+												<% if(products) { %>
+													<% products.forEach(function(doc) { %>
+														<% if (doc.P_Catalog == 'Shirt') { %>
+															<div class="col-sm-3">
+																<div class="content_box"><a href="">
+																	<img src="../images/index/<%= doc.P_Item %>.jpg" class="img-responsive" alt="">
+																	</a>
+																	<h4><a><%= doc.P_Name %></a></h4>
+																	<p data-max-characters="65"><%= doc.P_Desc %></p>
+																	<div class="grid_1 simpleCart_shelfItem">
+																	
+																	<div class="price-tag"><span class="item_price"><h6>ONLY R<%= doc.P_Price %></h6></span></div>
+																	<div class="item_add"><span class="item_price"><a id="viewModalItem" data-toggle="modal" data-target="#myViewModal">view</a></span></div>
+																	</div>
+																</div>
+															</div>
+														<% } %>
+													<% }) %>
+												<% } %>
+											</div>
+											<div class="clearfix"></div>
+										</div>
+									   <div class="clearfix"></div>
+									</section>
+
+									<section id="section-6">
+										<div class="w_content">
+											<div class="women">
+												<a href="#" class="item-total"><h4><span class="item-no">0</span> - items</h4></a>
+												<ul class="w_nav">
+															<li>Sort : </li>
+															 <li><a class="active" href="#">popular</a></li> |
+															 <li><a href="#">new </a></li> |
+															 <li><a href="#">discount</a></li> |
+															 <li><a href="#">price: Low High </a></li> 
+															 <div class="clear"></div>	
+												 </ul>
+												 <div class="clearfix"></div>	
+											</div>
+											<!-- grids_of_4 -->
+											<div class="grids_of_4">
+												<% if(products) { %>
+													<% products.forEach(function(doc) { %>
+														<% if (doc.P_Catalog == 'Jacket') { %>
+															<div class="col-sm-3">
+																<div class="content_box"><a href="">
+																	<img src="../images/index/<%= doc.P_Item %>.jpg" class="img-responsive" alt="">
+																	</a>
+																	<h4><a><%= doc.P_Name %></a></h4>
+																	<p data-max-characters="65"><%= doc.P_Desc %></p>
+																	<div class="grid_1 simpleCart_shelfItem">
+																	
+																	<div class="price-tag"><span class="item_price"><h6>ONLY R<%= doc.P_Price %></h6></span></div>
+																	<div class="item_add"><span class="item_price"><a id="viewModalItem" data-toggle="modal" data-target="#myViewModal">view</a></span></div>
+																	</div>
+																</div>
+															</div>
+														<% } %>
+													<% }) %>
+												<% } %>
+											</div>
+											<div class="clearfix"></div>
+										</div>
+									   <div class="clearfix"></div>
+									</section>
+
+									<section id="section-7">
+										<div class="w_content">
+											<div class="women">
+												<a href="#" class="item-total"><h4><span class="item-no">0</span> - items</h4></a>
+												<ul class="w_nav">
+															<li>Sort : </li>
+															 <li><a class="active" href="#">popular</a></li> |
+															 <li><a href="#">new </a></li> |
+															 <li><a href="#">discount</a></li> |
+															 <li><a href="#">price: Low High </a></li> 
+															 <div class="clear"></div>	
+												 </ul>
+												 <div class="clearfix"></div>	
+											</div>
+											<!-- grids_of_4 -->
+											<div class="grids_of_4">
+												<% if(products) { %>
+													<% products.forEach(function(doc) { %>
+														<% if (doc.P_Catalog == 'Trouser') { %>
+															<div class="col-sm-3">
+																<div class="content_box"><a href="">
+																	<img src="../images/index/<%= doc.P_Item %>.jpg" class="img-responsive" alt="">
+																	</a>
+																	<h4><a><%= doc.P_Name %></a></h4>
+																	<p data-max-characters="65"><%= doc.P_Desc %></p>
+																	<div class="grid_1 simpleCart_shelfItem">
+																	
+																	<div class="price-tag"><span class="item_price"><h6>ONLY R<%= doc.P_Price %></h6></span></div>
+																	<div class="item_add"><span class="item_price"><a id="viewModalItem" data-toggle="modal" data-target="#myViewModal">view</a></span></div>
+																	</div>
+																</div>
+															</div>
+														<% } %>
+													<% }) %>
+												<% } %>
+											</div>
+											<div class="clearfix"></div>
+										</div>
+									   <div class="clearfix"></div>
+									</section>
+
+									<section id="section-8">
+										<div class="w_content">
+											<div class="women">
+												<a href="#" class="item-total"><h4><span class="item-no">0</span> - items</h4></a>
+												<ul class="w_nav">
+															<li>Sort : </li>
+															 <li><a class="active" href="#">popular</a></li> |
+															 <li><a href="#">new </a></li> |
+															 <li><a href="#">discount</a></li> |
+															 <li><a href="#">price: Low High </a></li> 
+															 <div class="clear"></div>	
+												 </ul>
+												 <div class="clearfix"></div>	
+											</div>
+											<!-- grids_of_4 -->
+											<div class="grids_of_4">
+												<% if(products) { %>
+													<% products.forEach(function(doc) { %>
+														<% if (doc.P_Catalog == 'Skirt') { %>
+															<div class="col-sm-3">
+																<div class="content_box"><a href="details">
+																		<img src="../images/index/<%= doc.P_Item %>.jpg" class="img-responsive" alt="">
+																		</a>
+																	<h4><a><%= doc.P_Name %></a></h4>
+																	<p data-max-characters="65">It is a long established fact that</p>
+																	<div class="grid_1 simpleCart_shelfItem">
+																	
+																	<div class="item_add"><span class="item_price"><h6>ONLY R<%= doc.P_Price %></h6></span></div>
+																	<div class="item_add"><span class="item_price"><a data-toggle="modal" data-target="#myViewModal">view</a></span></div>
+																	</div>
+																</div>
+															</div>
+														<% } %>
+													<% }) %>
+												<% } %>
+											</div>
+											<div class="clearfix"></div>
+										</div>
+									   <div class="clearfix"></div>
+									</section>												
+								</div><!-- /content -->
+						</div>
+
+						<div class="modal fade" id="myViewModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+										<h2 class="modal-title">View</h2>
+									</div>
+									<div class="modal-body">
+										
+										<div class="row single">
+											<div class="det">
+											  <div class="single_left">
+												<div class="grid images_3_of_2">
+													<div class="flexslider">
+																<!-- FlexSlider -->
+																	<script src="../vendor/js/imagezoom.js"></script>
+																	  <script defer="" src="../vendor/js/jquery.flexslider.js"></script>
+																	<link rel="stylesheet" href="../vendor/css/flexslider.css" type="text/css" media="screen">
+							
+																	<script>
+																	// Can also be used with $(document).ready()
+																	$(window).load(function() {
+																	  $('.flexslider').flexslider({
+																		animation: "slide",
+																		controlNav: "thumbnails"
+																	  });
+																	});
+																	</script>
+																<!-- //FlexSlider-->
+							
+														  
+														
+													<div class="flex-viewport" style="overflow: hidden; position: relative;"><ul class="slides" style="width: 1200%; transition-duration: 0.6s; transform: translate3d(-864px, 0px, 0px);"><li data-thumb="../vendor/images/d4.jpg" class="clone" aria-hidden="true" style="width: 288px; float: left; display: block;">
+															   <div class="thumb-image"> <img src="../vendor/images/d4.jpg" data-imagezoom="true" class="img-responsive" draggable="false"> </div>
+															</li>
+															<li data-thumb="../vendor/images/d1.jpg" class="" style="width: 288px; float: left; display: block;">
+																<div class="thumb-image"> <img src="../vendor/images/d1.jpg" data-imagezoom="true" class="img-responsive" draggable="false"> </div>
+															</li>
+															<li data-thumb="../vendor/images/d2.jpg" style="width: 288px; float: left; display: block;" class="">
+																 <div class="thumb-image"> <img src="../vendor/images/d2.jpg" data-imagezoom="true" class="img-responsive" draggable="false"> </div>
+															</li>
+															<li data-thumb="../vendor/images/d3.jpg" style="width: 288px; float: left; display: block;" class="flex-active-slide">
+															   <div class="thumb-image"> <img src="../vendor/images/d3.jpg" data-imagezoom="true" class="img-responsive" draggable="false"> </div>
+															</li>
+															
+														  </ul></div><ul class="flex-direction-nav"><li class="flex-nav-prev"><a class="flex-prev" href="#">Previous</a></li><li class="flex-nav-next"><a class="flex-next" href="#">Next</a></li></ul></div>
+											  </div>
+											  <div class="desc1 span_3_of_2">
+												<h3>soluta nobis eleifend option</h3>
+												<span class="brand">Brand: <a href="#">Sed do eiusmod </a></span>
+												<br>
+												<span class="code">Product Code: Product 11</span>
+												<p>when an unknown printer took a galley of type and scrambled it to make</p>
+													<div class="price">
+														<span class="text">Price:</span>
+														<span class="price-new">$110.00</span><span class="price-old">$100.00</span> 
+														<span class="price-tax">Ex Tax: $90.00</span><br>
+														<span class="points"><small>Price in reward points: 400</small></span><br>
+													</div>
+												<div class="det_nav1">
+													<h4>Select a size :</h4>
+														<div class=" sky-form col col-4">
+															<ul>
+																<li><label class="checkbox"><input type="checkbox" name="checkbox"><i></i>L</label></li>
+																<li><label class="checkbox"><input type="checkbox" name="checkbox"><i></i>S</label></li>
+																<li><label class="checkbox"><input type="checkbox" name="checkbox"><i></i>M</label></li>
+																<li><label class="checkbox"><input type="checkbox" name="checkbox"><i></i>XL</label></li>
+															</ul>
+														</div>
+												</div>
+												<div class="btn_form">
+													<a href="checkout">buy</a>
+												</div>
+												<a href="#"><span>login to save in wishlist </span></a>
+												
+												</div>
+											  <div class="clearfix"></div>
+											 </div>
+											  <div class="single-bottom1">
+												<h6>Details</h6>
+												<p class="prod-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option</p>
+											</div>
+									   </div>			
+
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+										<button type="button" class="btn btn-primary">Save changes</button>
+									</div>
+								</div><!-- /.modal-content -->
+							</div><!-- /.modal-dialog -->
+						</div>
+
+												<!-- /tabs -->
+											</div>	
+								<script src="../vendor/js/cbpFWTabs.js"></script>
+									<script>
+										new CBPFWTabs( document.getElementById( 'tabs' ) );
+									</script>
+											
+	</div>
+	<!-- content-section-ends-here -->	
+
+<% include ../partials/footerBack %>
+<% include ../partials/sideBack %>

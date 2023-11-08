@@ -1,0 +1,134 @@
+﻿<% include ../partials/headerBack %>
+
+	<!-- content-section-starts -->
+		<!--content-->
+		<div class="content">
+			<div class="monthly-grid">
+				<div class="panel panel-widget">
+					<div class="panel-title">
+						Monthly Status Report
+						
+					</div>
+					<div class="panel-body">
+						<!-- status -->
+						<div class="contain">	
+							<div class="gantt"></div>
+						</div>
+						<!-- status -->
+					</div>
+				</div>
+			</div>
+						
+			<div class="content-top">
+				<div class="col-md-6 content-top-lft">
+					<div class="panel panel-widget">
+						<div class="panel-title">
+							Real Time Updates
+							
+						</div>
+						<div class="panel-body">
+							<div class="demo-container">
+								<div id="placeholder" class="demo-placeholder"></div>
+							</div>
+							<p>Time between updates: <input id="updateInterval" type="text" value="" style="text-align: right; width:5em"> milliseconds</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-6 chrt-two area">
+					<h3 class="sub-tittle" style="margin-bottom: 5%;">Line Multi Chart</h3>
+						<div>
+							<canvas id="canvas"></canvas>
+						</div>
+							<button id="randomizeData" style="margin-bottom: 20%;">Randomize Data</button>
+									<script>
+											var randomScalingFactor = function() {
+											return Math.round(Math.random() * 100 * (Math.random() > 0.5 ? -1 : 1));
+												};
+											var randomColor = function(opacity) {
+											return 'rgba(' + Math.round(Math.random() * 255) + ',' + Math.round(Math.random() * 255) + ',' + Math.round(Math.random() * 255) + ',' + (opacity || '.3') + ')';
+												};
+
+											var lineChartData = {
+												labels: ["January", "February", "March", "April", "May", "June", "July"],
+												datasets: [{
+													label: "My First dataset",
+													data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()],
+													yAxisID: "y-axis-1",
+													}, {
+															label: "My Second dataset",
+															data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()],
+																yAxisID: "y-axis-2"
+																}]
+															};
+
+															$.each(lineChartData.datasets, function(i, dataset) {
+																dataset.borderColor = randomColor(0.4);
+																dataset.backgroundColor = randomColor(1);
+																dataset.pointBorderColor = randomColor(0.7);
+																dataset.pointBackgroundColor = randomColor(0.5);
+																dataset.pointBorderWidth = 1;
+															});
+
+															console.log(lineChartData);
+
+															window.onload = function() {
+																var ctx = document.getElementById("canvas").getContext("2d");
+																window.myLine = Chart.Line(ctx, {
+																	data: lineChartData,
+																	options: {
+																		
+																		hoverMode: 'label',
+																		stacked: false,
+																		scales: {
+																			xAxes: [{
+																				display: true,
+																				gridLines: {
+																					offsetGridLines: false
+																				}
+																			}],
+																			yAxes: [{
+																				type: "linear", // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
+																				display: true,
+																				position: "left",
+																				id: "y-axis-1",
+																			}, {
+																				type: "linear", // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
+																				display: true,
+																				position: "right",
+																				id: "y-axis-2",
+
+																				// grid line settings
+																				gridLines: {
+																					drawOnChartArea: false, // only want the grid lines for one axis to show up
+																				},
+																			}],
+																		}
+																	}
+																});
+															};
+
+															$('#randomizeData').click(function() {
+																lineChartData.datasets[0].data = [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()];
+
+																lineChartData.datasets[1].data = [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()];
+
+																window.myLine.update();
+															});
+									</script>
+										<script src="../vendor/js/Chart.js"></script>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+
+			<!--area-->					
+				<div class="area">
+					
+					
+					<div class="clearfix"></div>
+				</div>
+						<!--//area-->
+	<!-- content-section-ends-here -->	
+
+<% include ../partials/footerBack %>
+<% include ../partials/sideBack %>

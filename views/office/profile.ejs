@@ -1,0 +1,285 @@
+﻿<% include ../partials/headerBack %>
+
+	<!-- content-section-starts -->
+	<div class="content">
+		<div class="women_main">
+			<!-- start content -->
+			<div class="tab-main">
+				<!--/tabs-inner-->
+				<div class="tab-inner">
+					<div id="tabs" class="tabs">
+						<div class="graph">
+
+							<nav class="col-md-5">
+								<div class=" profile">
+									<div class="profile-bottom">
+										<h3>...</h3>
+										<div class="profile-bottom-top">
+										<div class="col-md-4 profile-bottom-img">
+											<img src="../test/img/img.jpg" alt="">
+										</div>
+										<div class="col-md-8 profile-text">
+											<h6><%= user.C_Name %>&nbsp;<%= user.C_Surname %></h6>
+											<table>
+											<tbody><tr><td>Department</td>  
+											<td>:</td>  
+											<td><%= user.C_Role.Name %></td></tr>
+											
+											<tr>
+											<td>Email</td>
+											<td> :</td>
+											<td><a href="<%= user.C_Contact.Email %>"><%= user.C_Contact.Email %></a></td>
+											</tr>
+											<tr>
+											<td>Skills</td>
+											<td> :</td>
+											<td> HTML, CSS,Jqury, Bootstrap</td>
+											</tr>
+											<tr>
+											<td>Country </td>
+											<td>:</td>
+											<td> South African</td>
+											</tr>
+											</tbody></table>
+										</div>
+										<div class="clearfix"></div>
+										</div>
+										<div class="profile-bottom-bottom">
+										<div class="tab-current col-md-4 profile-fo">
+											<a href="#section-1" class="pro" data-toggle="modal" data-target="#myEditModal"><i class="fa fa-plus-circle"></i>Edit</a>
+										</div>
+										<div class="col-md-4 profile-fo">
+											<a href="#section-2" class="pro1"><i class="fa fa-user"></i>Add User</a>
+										</div>
+										<div class="col-md-4 profile-fo">
+											<a href="#"><i class="fa fa-cog"></i>Options</a>
+
+										</div>
+										<div class="clearfix"></div>
+										</div>
+
+										
+											<script>
+												(function() {
+											
+												// Create input element for testing
+												var inputs = document.createElement('input');
+												
+												// Create the supports object
+												var supports = {};
+												
+												supports.autofocus   = 'autofocus' in inputs;
+												supports.required    = 'required' in inputs;
+												supports.placeholder = 'placeholder' in inputs;
+											
+												// Fallback for autofocus attribute
+												if(!supports.autofocus) {
+													
+												}
+												
+												// Fallback for required attribute
+												if(!supports.required) {
+													
+												}
+											
+												// Fallback for placeholder attribute
+												if(!supports.placeholder) {
+													
+												}
+												
+												// Change text inside send button on submit
+												var send = document.getElementById('register-submit');
+												if(send) {
+													send.onclick = function () {
+														this.innerHTML = '...Sending';
+													}
+												}
+											
+											})();
+											</script>
+											
+											<div class="modal fade" id="myEditModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+														   <div class="modal-dialog">
+															   <div class="modal-content">
+																   <div class="modal-header">
+																	   <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+																	   <h2 class="modal-title">Update My Profile</h2>
+																   </div>
+																   <div class="modal-body">
+																	<div class="registration_form">
+																		<!-- Form -->
+																		   <form>
+																			   <div>
+																				   <label>
+																					   <input value="&nbsp;<%= user.C_Name %>" placeholder="first name:" type="text" tabindex="1" required="" autofocus="">
+																				   </label>
+																			   </div>
+																			   <div>
+																				   <label>
+																					   <input value="&nbsp;<%= user.C_Surname %>" placeholder="last name:" type="text" tabindex="2" required="" autofocus="">
+																				   </label>
+																			   </div>
+																			   <div>
+																				   <label>
+																					   <input value="&nbsp;<%= user.C_Contact.Email %>" placeholder="email address:" type="email" tabindex="3" required="">
+																				   </label>
+																			   </div>
+																			   <div class="sky-form">
+																				   <div class="sky_form1">
+																					   <ul>
+																						   <li><label class="radio left"><input type="radio" name="radio" checked=""><i></i>Male</label></li>
+																						   <li><label class="radio"><input type="radio" name="radio"><i></i>Female</label></li>
+																						   <div class="clearfix"></div>
+																					   </ul>
+																				   </div>
+																			   </div>
+																			   <div>
+																				   <label>
+																					   <input placeholder="password" type="password" tabindex="4" required="">
+																				   </label>
+																			   </div>						
+																			   <div>
+																				   <label>
+																					   <input placeholder="retype password" type="password" tabindex="4" required="">
+																				   </label>
+																			   </div>
+																			   <div class="sky-form">
+																				   <label class="checkbox"><input type="checkbox" name="checkbox"><i></i>i agree to shoppe.com &nbsp;<a class="terms" href="#"> terms of service</a> </label>
+																			   </div>
+																		   </form>
+																		   <!-- /Form -->
+																	   </div>
+																   </div>
+																   <div class="modal-footer">
+																	   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+																	   <button type="button" class="btn btn-primary">Save changes</button>
+																   </div>
+															   </div><!-- /.modal-content -->
+														   </div><!-- /.modal-dialog -->
+													   </div>
+
+													   <div class="modal fade" id="myViewModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+														<div class="modal-dialog">
+															<div class="modal-content">
+																<div class="modal-header">
+																	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+																	<h2 class="modal-title">Update User Profile</h2>
+																</div>
+																<div class="modal-body">
+																 <div class="registration_form">
+																	 <!-- Form -->
+																		<form>
+																			<div>
+																				<label>
+																					<input placeholder="first name:" type="text" tabindex="1" required="" autofocus="">
+																				</label>
+																			</div>
+																			<div>
+																				<label>
+																					<input placeholder="last name:" type="text" tabindex="2" required="" autofocus="">
+																				</label>
+																			</div>
+																			<div>
+																				<label>
+																					<input placeholder="email address:" type="email" tabindex="3" required="">
+																				</label>
+																			</div>
+																			<div class="sky-form">
+																				<div class="sky_form1">
+																					<ul>
+																						<li><label class="radio left"><input type="radio" name="radio" checked=""><i></i>Male</label></li>
+																						<li><label class="radio"><input type="radio" name="radio"><i></i>Female</label></li>
+																						<div class="clearfix"></div>
+																					</ul>
+																				</div>
+																			</div>
+																			<div>
+																				<label>
+																					<input placeholder="password" type="password" tabindex="4" required="">
+																				</label>
+																			</div>						
+																			<div>
+																				<label>
+																					<input placeholder="retype password" type="password" tabindex="4" required="">
+																				</label>
+																			</div>
+																			<div class="sky-form">
+																				<label class="checkbox"><input type="checkbox" name="checkbox"><i></i>i agree to shoppe.com &nbsp;<a class="terms" href="#"> terms of service</a> </label>
+																			</div>
+																		</form>
+																		<!-- /Form -->
+																	</div>
+																</div>
+																<div class="modal-footer">
+																	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+																	<button type="button" class="btn btn-primary">Save changes</button>
+																</div>
+															</div><!-- /.modal-content -->
+														</div><!-- /.modal-dialog -->
+													</div>
+		
+									</div>
+								</div>
+
+								<ul>
+									
+								</ul>
+							</nav>
+						<div class="content tab col-md-7" style="padding: 0;">
+							<section id="section-1" class="content-current" style="padding: 0;">
+
+								<div class=" profile">
+
+									<div class="profile-bottom" style="text-align: center;">
+										<h3>User's Profile</h3>
+										<div class="profile-bottom-top">
+											<div class="mediabox">
+												<div class="panel-body no-padding" style="font-size: 11pt;">
+													<table class="table table-striped">
+														<thead>
+															<tr class="warning">
+																<th>#</th>
+																<th>First Name</th>
+																<th>Last Name</th>
+																<th>Username</th>
+																<th>Cellphone #</th>
+																<th><a class="fa fa-file"></a></th>
+															</tr>
+														</thead>
+														
+														<tbody>
+															<% if(allUsers) { %>
+																<% allUsers.forEach(function(doc) { %>
+																	<tr>
+																		<td><%= doc.count %></td>
+																		<td><%= doc.C_Name %></td>
+																		<td><%= doc.C_Surname %></td>
+																		<td><%= doc.C_Contact.Email %></td>
+																		<th><%= doc.C_Contact.Cellphone %></th>
+																		<td><a data-toggle="modal" data-target="#myViewModal">Edit</a></td>
+																	</tr>
+																<% }) %>
+															<% } %>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+						</div><!-- /content -->
+					</div>
+					<!-- /tabs -->
+				</div>
+			<script src="../vendor/js/cbpFWTabs.js"></script>
+		<script>
+			new CBPFWTabs( document.getElementById( 'tabs' ) );
+		</script>
+		<div class="clearfix"> </div>
+	</div>
+</div>
+	<!-- content-section-ends-here -->	
+
+<% include ../partials/footerBack %>
+<% include ../partials/sideBack %>

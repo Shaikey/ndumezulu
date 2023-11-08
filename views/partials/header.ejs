@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Ndumezulu | Boutique</title>
+	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="js/jquery.js"></script>
+	<!-- Custom Theme files -->
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/component.css" rel='stylesheet' type='text/css' />
+	<!-- Custom Theme files -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Ndumezulu Boutique is an online e-commerce platform where you can shop online through orders which will be forwarded to a professional tailor who will bring it to reality. You can also order from our limited stock online... enjoy!" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!--webfont-->
+	<!-- for bootstrap working -->
+		<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
+	<!-- //for bootstrap working -->
+	
+	<!-- cart -->
+	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+	<!-- favicon -->
+	<link rel="shortcut icon" href="images/favicon.png">
+	<!--visuals:-->
+	<link href="css/magic360.css" rel="stylesheet" />
+	<script src="js/magic/magic360.js"></script>
+	<script src="js/normalize_pg.js"></script>
+</head>
+<body>
+	<!-- header-section-starts -->
+	<div class="header">
+		<div class="header-top-strip">
+			<div class="container">
+				<div class="header-top-left">
+					<% if(user == 'None') { %>
+						<ul>
+							<li><a href="login"><span class="glyphicon glyphicon-user"> </span>Login</a></li>
+							<li><a href="register"><span class="glyphicon glyphicon-lock"> </span>Create an Account</a></li>			
+						</ul>
+					<% } else { %>
+						<ul>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"> </span><%= user.C_Name %> <b class="caret"></b></a>
+								<ul class="dropdown-menu multi-column columns-1">
+									<div class="row">
+										<div class="col-sm-12">
+											<ul class="multi-column-dropdown">
+												<div class="list-group list-group-alternate"> 
+													<a data-toggle="modal" data-target="#myViewModal" class="list-group-item"><span class="badge">0</span> <i class="ti ti-email"></i> Orders </a> 
+													<a data-toggle="modal" data-target="#myViewModal" class="list-group-item"><span class="badge badge-primary"></span> <i class="ti ti-eye"></i> Carts </a> 
+													<a data-toggle="modal" data-target="#myViewModal" class="list-group-item"><span class="badge">0</span> <i class="ti ti-headphone-alt"></i> Inbox </a>
+													<a href="/logout" class="list-group-item"><span class="badge badge-danger"></span> <i class="fa fa-lock"></i> Signout </a> 
+												</div>
+											</ul>
+										</div>
+										<div class="clearfix"></div>
+									</div>
+								</ul>
+							</li>			
+						</ul>
+					<% } %>
+				</div>
+				<div class="header-right">
+					<div class="cart box_1">
+						<a data-toggle="modal" data-target="#myViewModal">
+							<h3> <span class="simpleCart_total"> R0.00 </span> (<span id="simpleCart_quantity" class="simpleCart_quantity"> 0 </span>)<img src="images/bag.png" alt=""></h3>
+						</a>	
+						<p><a class="simpleCart_empty">Empty cart</a></p>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="banner-top">
+		<div class="container">
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+						<div class="logo">
+							<a href="index"><img src="vendor/images/logon.png" class="img-responsive" alt=""></a>
+							<!-- <h1><a href="index"><span>E</span> -Shop</a></h1> -->
+						</div>
+				</div>
+				<!--/.navbar-header-->
+		
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+					<li><a href="index">Home</a></li>
+					<li><a href="about">About</a></li>		        
+					<li><a href="testimonial">Testimonial</a></li>		        
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Get a Quote <b class="caret"></b></a>
+						<ul class="dropdown-menu multi-column columns-2">
+							<div class="row">
+								<div class="col-sm-12">
+									<ul class="multi-column-dropdown">
+										<h6>NEW IN</h6>
+										<form>
+											<div class="form-group"> 
+												<div class="input-group">
+													<span class="input-group-addon" id="basic-addon1">$</span>
+													<input  type="text" class="form-control" required="true" placeholder="Your Name">
+												</div>
+											</div>
+											<div class="input-group">							
+												<span class="input-group-addon" id="basic-addon1">@</span>
+												<input type="text" class="form-control" required="true" placeholder="Email Address">
+											</div>
+											<div class="form-group"> 
+												<textarea placeholder="Description of your product you are quoting..." name="field-4-2" id="field-4-2" required="true" maxlength="10" class="form-control" style="height: 124px;"></textarea>
+											</div>
+											
+											<div class="form-group"> 
+												<label for="exampleInputFile">File input</label> 
+												<input type="file" id="exampleInputFile"> 
+												<p class="help-block">Make sure you attach a picture.</p> 
+											</div> 
+											<div class="checkbox"> 
+												<label> <input type="checkbox"> Check me out </label> 
+											</div>
+											<input type="submit" value="SUBMIT">
+										</form>
+									</ul>
+								</div>				            
+								<div class="clearfix"></div>
+							</div>
+						</ul>
+					</li>
+					<li><a href="contact">CONTACT</a></li>
+					</ul>
+				</div>
+			<!--/.navbar-collapse-->
+			</nav>
+		<!--/.navbar-->
+		</div>
+	</div>
+
+	<div class="modal fade" id="myViewModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<h4 class="modal-title" style="line-height: 0;">My Dashboard</h2>
+				</div>
+				<div class="modal-body" style="overflow-y: scroll; height: 480px;">
+					<div class="cart-prof">
+						<!-- append here... -->
+						<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+							<ul id="myTabDashboard" class="nav nav-tabs" role="tablist">
+							  <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Orders</a></li>
+							  <li role="presentation" class=""><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">Cart</a></li>
+							  <li role="presentation" class="dropdown">
+								<a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown" aria-controls="myTabDrop1-contents" aria-expanded="false">Messages <span class="caret"></span></a>
+								<ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1" id="myTabDrop1-contents">
+								  <li><a href="#dropdown1Dash" tabindex="-1" role="tab" id="dropdown1-tab" data-toggle="tab" aria-controls="dropdown1">Inbox</a></li>
+								  <li><a href="#dropdown2Dash" tabindex="-1" role="tab" id="dropdown2-tab" data-toggle="tab" aria-controls="dropdown2">Support</a></li>
+								</ul>
+							  </li>
+							</ul>
+							<div id="myTabDashContent" class="tab-content">
+							  <div role="tabpanel" class="tab-pane fade active in" id="home" aria-labelledby="home-tab">
+								<p style="margin-bottom: 5%;">No orders made yet.</p>
+								<i>Start shopping...</i>
+								<img src="images/home/partner1.png" class="img-responsive" style="width: 40%; margin: auto;" alt />
+								<img src="images/home/sale.png" class="img-responsive" style="margin: -17% 20% 0 0; float: right;" alt />
+							  </div>
+							  <div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
+								<div class="cart-gd">
+									<!-- append here... -->
+								</div>
+								<div class="modal-bottom-cart">
+									<p class="modal-title-footer">Grand Total: R </p>
+									<button type="button" class="btn btn-primary" style="float: right;">Purchase</button>
+								</div>
+							  </div>
+							  <div role="tabpanel" class="tab-pane fade" id="dropdown1Dash" aria-labelledby="dropdown1-tab">
+								<p>Nothing to show at the moment.</p>
+								<img src="vendor/images/user-prof/Untitled-1.png" class="img-responsive" style="width: 70%; margin: auto;" alt />
+							  </div>
+							  <div role="tabpanel" class="tab-pane fade" id="dropdown2Dash" aria-labelledby="dropdown2-tab">
+								<p style="margin-bottom: 5%;">You've got no messages yet.</p>
+								<i>Write to support...</i>
+								<div class="input-group">
+									<textarea type="textarea" class="form-control" placeholder="Message" aria-describedby="basic-addon2" rows="6"></textarea>
+									<span class="input-group-addon" id="basic-addon2"><img src="images/grid_view.png" class="img-responsive" style="width: 25px!important;height: 25px;max-width: fit-content;" alt=""></span>
+								</div>
+								<div class="modal-bottom-supp">
+									<button type="button" class="btn btn-primary">Send query</button>
+								</div>
+							  </div>
+							</div>
+						   </div>
+					</div>
+					<div class="cart-inbox">
+						<!-- append here... -->
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div>
+	<!-- header-section-ends -->
+

@@ -1,0 +1,110 @@
+﻿<% include ../partials/header %>
+		
+	<!-- content-section-starts -->
+	<div class="content">
+	<div class="container">
+		<div class="login-page">
+			    <div class="dreamcrub">
+			   	 <ul class="breadcrumbs">
+                    <li class="home">
+                       <a href="index" title="Go to Home Page">Home</a>&nbsp;
+                       <span>&gt;</span>
+                    </li>
+                    <li class="women">
+                       Login
+                    </li>
+                </ul>
+                <ul class="previous">
+                	<li><a href="index">Back to Previous Page</a></li>
+                </ul>
+                <div class="clearfix"></div>
+			   </div>
+			   <div class="account_grid">
+			   <div class="col-md-6 login-left wow fadeInLeft" data-wow-delay="0.4s">
+			  	 <h2>NEW CUSTOMERS</h2>
+				 <p>By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.</p>
+				 <a class="acount-btn" href="register">Create an Account</a>
+			   </div>
+			   <div class="col-md-6 login-right wow fadeInRight" data-wow-delay="0.4s">
+			  	<h3>REGISTERED CUSTOMERS</h3>
+				<p>If you have an account with us, please log in.</p>
+				<% if(user == 'None' && error == 'Password does not match!') { %>
+					<div class="alert alert-warning" role="alert">
+						<%= error %>
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							<span aria-hidden="true">×</span>
+						  </button>
+					</div>
+				<% } else if(user != 'None' && error == 'You have successfully logged in.') { %>
+					<div class="alert alert-success" role="alert">
+						<%= error %>
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							<span aria-hidden="true">×</span>
+						  </button>
+					</div>
+				<% } else if(user == 'None' && error == 'User does not exist!') { %>
+					<div class="alert alert-danger" role="alert">
+						<%= error %>
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							<span aria-hidden="true">×</span>
+						  </button>
+					</div>
+				<% } %>	
+				<form action="/login" accept-charset="UTF-8" method="POST" name="search-theme-form" id="search-theme-form">
+				  <div>
+					<span>Email Address<label>*</label></span>
+					<input required="true" name="email_log" id="passLog" type="text"> 
+				  </div>
+				  <div style="margin-bottom: -10%;">
+					<span>Password<label>*</label></span>
+					<div class="input-group">
+						<input required="true" name="password_log" type="password" style="width:100%;" class="form-control" aria-label="...">
+						<div class="input-group-btn">
+						  <button type="button" id="dropRole" style="height: 35px;" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" disabled="true" aria-expanded="false">Default <span class="caret"></span></button>
+						  <ul class="dropdown-menu dropdown-menu-right">
+							<li><a>Default</a></li>
+							<li><a>System</a></li>
+							<li><a>Other</a></li>
+							<li role="separator" class="divider"></li>
+						  </ul>
+						</div><!-- /btn-group -->
+					  </div>
+				  </div>
+				  <a class="forgot" href="#">Forgot Your Password?</a>
+				  <input type="submit" value="Login">
+			    </form>
+			   </div>	
+			   <div class="clearfix"> </div>
+			 </div>
+		   </div>
+</div>
+		<!-- content-section-ends-here -->	
+
+		<div class="modal fade" id="inputViewModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+						<h2 class="modal-title">Update User Profile</h2>
+					</div>
+					<div class="modal-body">
+						<div class="registration_form">
+							<!-- Form -->
+							<form>
+								<div>
+									<label>
+										<input placeholder="password" type="password" tabindex="4" required="">
+									</label>
+								</div>
+							</form>
+						</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div>
+		
+
+<% include ../partials/footer %>

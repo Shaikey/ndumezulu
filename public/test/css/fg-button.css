@@ -1,0 +1,103 @@
+﻿
+        .fg-button
+        {
+            outline: 0;
+            padding: .45em 0.9em .38em 1em;
+            text-decoration: none !important;
+            cursor: pointer;
+            position: relative;
+            text-align: center;
+            zoom: 1;
+            top: 1px;
+			margin:0 8px 16px 0;
+}
+        .fg-button .ui-icon
+        {
+            position: absolute;
+            top: 50%;
+            margin-top: -8px;
+            left: 50%;
+            margin-left: -8px;
+        }
+        a.fg-button, input[type=submit].fg-button
+        {
+            float: left;
+			background:#004361;
+			color:#fff;
+			font-size:16px;
+			font-family:"MenschRegular", Arial, Helvetica, sans-serif;
+			border:2px solid #004361;
+        }
+
+        a.fg-button:hover, input[type=submit].fg-button:hover
+        {
+			background:#3b7595;
+			box-shadow:0 0 4px #000;
+			-moz-box-shadow:0 0 4px #000;
+			-webkit-box-shadow:0 0 4px #000;
+			-o-box-shadow:0 0 4px #000;
+			border:2px solid #fff;
+        }	
+		
+		
+		
+        /* remove extra button width in IE */button.fg-button
+        {
+            width: auto;
+            overflow: visible;
+        }
+        .fg-button-icon-left
+        {
+            padding-left: 1.6em;
+        }
+        .fg-button-icon-right
+        {
+            padding-right: 1.6em;
+        }
+        .fg-button-icon-left .ui-icon
+        {
+            left: .2em;
+            margin-left: 0;
+        }
+        .fg-button-icon-right .ui-icon
+        {
+            left: auto;
+            right: .2em;
+            margin-left: 0;
+        }
+        .fg-button-icon-solo
+        {
+            display: block;
+            width: 8px;
+            text-indent: -9999px;
+        }
+        /* solo icon buttons must have block properties for the text-indent to work */.fg-buttonset
+        {
+            float: left;
+        }
+        .fg-buttonset .fg-button
+        {
+            float: left;
+        }
+        .fg-buttonset-single .fg-button, .fg-buttonset-multi .fg-button
+        {
+            margin-right: -1px;
+        }
+        .fg-toolbar
+        {
+            padding: .5em;
+            margin: 0;
+        }
+        .fg-toolbar .fg-buttonset
+        {
+            margin-right: 1.5em;
+            padding-left: 1px;
+        }
+        .fg-toolbar .fg-button
+        {
+            font-size: 1em;
+        }
+        .strike
+        {
+            text-decoration: line-through;
+        }

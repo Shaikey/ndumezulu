@@ -1,0 +1,276 @@
+﻿<% include ../partials/header %>
+		
+	
+		<!-- content-section-starts -->
+	<div class="container">
+	   <div class="products-page">
+			<div class="products">
+				<div class="product-listy">
+					<h2>our Products</h2>
+					<ul class="product-list">
+						<li><a href="items">All</a></li>
+						<li><a href="items">T-shirts</a></li>
+						<li><a href="items">pants</a></li>
+						<li><a href="items">Dresses</a></li>
+						<li><a href="items">Shorts</a></li>
+						<li><a href="items">Suits</a></li>
+						<li><a href="items">Hats</a></li>
+					</ul>
+				</div>
+				<div class="latest-bis">
+					<img src="images/l4.jpg" class="img-responsive" alt="" />
+					<div class="offer">
+						<p>40%</p>
+						<small>Top Offer</small>
+					</div>
+				</div> 	
+				<div class="tags">
+					<h4 class="tag_head">Tags Widget</h4>
+					 <ul class="tags_links">
+						<li><a href="#">Kitesurf</a></li>
+						<li><a href="#">Super</a></li>
+						<li><a href="#">Duper</a></li>
+						<li><a href="#">Theme</a></li>
+						<li><a href="#">Men</a></li>
+						<li><a href="#">Women</a></li>
+						<li><a href="#">Equipment</a></li>
+						<li><a href="#">Best</a></li>
+						<li><a href="#">Accessories</a></li>
+						<li><a href="#">Men</a></li>
+						<li><a href="#">Apparel</a></li>
+						<li><a href="#">Super</a></li>
+						<li><a href="#">Duper</a></li>
+						<li><a href="#">Theme</a></li>
+						<li><a href="#">Responsive</a></li>
+						<li><a href="#">Women</a></li>
+						<li><a href="#">Equipment</a></li>
+					</ul>
+				 </div>
+			</div>
+			<div class="new-product">
+				<% if(item == 'value3' || item == 'value5') { %>
+					<div class="col-md-5 zoom-grid">
+						<div class="preview col" id="target-main-view">
+							<div class="app-figure col-img" id="zoom-fig">
+								<a id="spin-1" class="Magic360" data-options="rows: 1; columns: 17"
+								href="">
+									<img id="spin-1-thumb" src="" />
+								</a>
+							</div>
+						</div>
+					</div>
+				<% } else { %>
+					<div class="col-md-5 zoom-grid">
+						<div class="flexslider">
+							<ul class="slides">
+								<li data-thumb="images/index/<%= item %>.jpg">
+									<div class="thumb-image"> <img src="images/index/<%= item %>.jpg" data-imagezoom="true" class="img-responsive" alt="" /> </div>
+								</li>
+								<li data-thumb="images/index/<%= item %>.jpg">
+									<div class="thumb-image"> <img src="images/index/<%= item %>.jpg" data-imagezoom="true" class="img-responsive" alt="" /> </div>
+								</li>
+								<li data-thumb="images/index/<%= item %>.jpg">
+								<div class="thumb-image"> <img src="images/index/<%= item %>.jpg" data-imagezoom="true" class="img-responsive" alt="" /> </div>
+								</li> 
+							</ul>
+						</div>
+					</div>
+				<% } %>	
+				
+				<div class="col-md-7 dress-info" id="product-det"></div>
+				
+				<div class="clearfix"></div>
+				<div class="reviews-tabs">
+					<!-- Main component for a primary marketing message or call to action -->
+					<ul class="nav nav-tabs responsive hidden-xs hidden-sm" id="myTab">
+						<li class="test-class active"><a class="deco-none misc-class" href="#how-to"> More Information</a></li>
+						<li class="test-class"><a href="#features">Specifications</a></li>
+						<li class="test-class"><a class="deco-none" href="#source">Reviews (7)</a></li>
+					</ul>
+
+					<div class="tab-content responsive hidden-xs hidden-sm">
+						<div class="tab-pane active" id="how-to">
+							<p class="tab-text">Maecenas mauris velit, consequat sit amet feugiat rit, elit vitaeert scelerisque elementum, turpis nisl accumsan ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry. and scrambled it to make a type specimen book. It has survived Auction your website on Flippa and you'll get the best price from serious buyers, dedicated support and a much better deal than you'll find with any website broker. Sell your site today I need a twitter bootstrap 3.0 theme for the full-calendar plugin. it would be great if the theme includes the add event; remove event, show event details. this must be RESPONSIVE and works on mobile devices. Also, I've seen so many bootstrap themes that comes up with the fullcalendar plugin. However these . </p>    
+						</div>
+						<div class="tab-pane" id="features">
+							<p class="tab-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna, euismod ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravida mollis.This tab has icon in consectetur adipiscing eliconse consectetur adipiscing elit. Vestibulum nibh urna, ctetur adipiscing elit. Vestibulum nibh urna, t.consectetur adipiscing elit. Vestibulum nibh urna,  Vestibulum nibh urna,it.</p>
+							<p class="tab-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit,There are many variations of passages of Lorem Ipsum available, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						</div>
+						<div class="tab-pane" id="source">
+							<div class="response">
+								<div class="media response-info">
+									<div class="media-left response-text-left">
+										<a href="#">
+											<img class="media-object" src="images/icon1.png" alt="" />
+										</a>
+										<h5><a href="#">Username</a></h5>
+									</div>
+									<div class="media-body response-text-right">
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,There are many variations of passages of Lorem Ipsum available, 
+											sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+										<ul>
+											<li>MARCH 21, 2015</li>
+											<li><a href="item">Reply</a></li>
+										</ul>
+									</div>
+									<div class="clearfix"> </div>
+								</div>
+								<div class="media response-info">
+									<div class="media-left response-text-left">
+										<a href="#">
+											<img class="media-object" src="images/icon1.png" alt="" />
+										</a>
+										<h5><a href="#">Username</a></h5>
+									</div>
+									<div class="media-body response-text-right">
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,There are many variations of passages of Lorem Ipsum available, 
+											sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+										<ul>
+											<li>MARCH 26, 2054</li>
+											<li><a href="item">Reply</a></li>
+										</ul>		
+									</div>
+									<div class="clearfix"> </div>
+								</div>
+								<div class="media response-info">
+									<div class="media-left response-text-left">
+										<a href="#">
+											<img class="media-object" src="images/icon1.png" alt="" />
+										</a>
+										<h5><a href="#">Username</a></h5>
+									</div>
+									<div class="media-body response-text-right">
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,There are many variations of passages of Lorem Ipsum available, 
+											sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+										<ul>
+											<li>MAY 25, 2015</li>
+											<li><a href="item">Reply</a></li>
+										</ul>		
+									</div>
+									<div class="clearfix"> </div>
+								</div>
+								<div class="media response-info">
+									<div class="media-left response-text-left">
+										<a href="#">
+											<img class="media-object" src="images/icon1.png" alt="" />
+										</a>
+										<h5><a href="#">Username</a></h5>
+									</div>
+									<div class="media-body response-text-right">
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,There are many variations of passages of Lorem Ipsum available, 
+											sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+										<ul>
+											<li>FEB 13, 2015</li>
+											<li><a href="item">Reply</a></li>
+										</ul>		
+									</div>
+									<div class="clearfix"> </div>
+								</div>
+								<div class="media response-info">
+									<div class="media-left response-text-left">
+										<a href="#">
+											<img class="media-object" src="images/icon1.png" alt="" />
+										</a>
+										<h5><a href="#">Username</a></h5>
+									</div>
+									<div class="media-body response-text-right">
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,There are many variations of passages of Lorem Ipsum available, 
+											sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+										<ul>
+											<li>JAN 28, 2015</li>
+											<li><a href="item">Reply</a></li>
+										</ul>		
+									</div>
+									<div class="clearfix"> </div>
+								</div>
+								<div class="media response-info">
+									<div class="media-left response-text-left">
+										<a href="#">
+											<img class="media-object" src="images/icon1.png" alt="" />
+										</a>
+										<h5><a href="#">Username</a></h5>
+									</div>
+									<div class="media-body response-text-right">
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,There are many variations of passages of Lorem Ipsum available, 
+											sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+										<ul>
+											<li>APR 18, 2015</li>
+											<li><a href="item">Reply</a></li>
+										</ul>		
+									</div>
+									<div class="clearfix"> </div>
+								</div>
+								<div class="media response-info">
+									<div class="media-left response-text-left">
+										<a href="#">
+											<img class="media-object" src="images/icon1.png" alt="" />
+										</a>
+										<h5><a href="#">Username</a></h5>
+									</div>
+									<div class="media-body response-text-right">
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,There are many variations of passages of Lorem Ipsum available, 
+											sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+										<ul>
+											<li>DEC 25, 2014</li>
+											<li><a href="item">Reply</a></li>
+										</ul>		
+									</div>
+									<div class="clearfix"> </div>
+								</div>
+							</div>
+						</div>
+					</div>		
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+   </div>
+   <div class="other-products products-grid">
+		<div class="container">
+			<header>
+				<h3 class="like text-center">Related Products</h3>   
+			</header>			
+				<div class="col-md-4 product simpleCart_shelfItem text-center">
+					<a href="items"><img src="images/p1.jpg" alt="" /></a>
+					<div class="mask">
+						<a href="items">Quick View</a>
+					</div>
+					<a class="product_name" href="items">Sed ut perspiciatis</a>
+					<p><a class="item_add" href="#"><i></i> <span class="item_price">$329</span></a></p>
+				</div>
+				<div class="col-md-4 product simpleCart_shelfItem text-center">
+					<a href="items"><img src="images/p2.jpg" alt="" /></a>
+					<div class="mask">
+						<a href="items">Quick View</a>
+					</div>
+					<a class="product_name" href="items">great explorer</a>
+					<p><a class="item_add" href="#"><i></i> <span class="item_price">$599.8</span></a></p>
+				</div>
+				<div class="col-md-4 product simpleCart_shelfItem text-center">
+					<a href="items"><img src="images/p3.jpg" alt="" /></a>
+					<div class="mask">
+						<a href="items">Quick View</a>
+					</div>
+					<a class="product_name" href="items">similique sunt</a>
+					<p><a class="item_add" href="#"><i></i> <span class="item_price">$359.6</span></a></p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		</div>
+   <!-- content-section-ends -->
+
+	<!-- <script src="js/imagezoom.js"></script> -->
+	<!-- FlexSlider -->
+	<script defer src="js/jquery.flexslider.js"></script>
+	<script>
+		// Can also be used with $(document).ready()
+		$(window).load(function() {
+		  $('.flexslider').flexslider({
+			animation: "slide",
+			controlNav: "thumbnails"
+		  });
+		});
+	</script>
+					
+<% include ../partials/footer %>

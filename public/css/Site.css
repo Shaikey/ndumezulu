@@ -1,0 +1,670 @@
+﻿/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+    /*padding-top: 50px;*/
+    padding-bottom: 20px;
+    margin-left: 6px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set widths on the form inputs since otherwise they're 100% wide */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="select"] {
+    /*max-width: 280px;*/
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .jumbotron {
+        margin-top: 20px;
+    }
+
+    .body-content {
+        padding: 0;
+    }
+}
+
+/* BDM added */
+
+/* Import Fonts */
+@font-face {
+    font-family: 'MenschRegular';
+    src: url('../fonts/mensch-wf.eot');
+    src: url('../fonts/mensch-wf.eot?#iefix') format('embedded-opentype'), url('../fonts/mensch-wf.woff') format('woff'), url('../fonts/mensch-wf.ttf') format('truetype'), url('../fonts/mensch-wf.svg#mensch-wf') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* fg button styles */
+a.fg-button, input[type=submit].fg-button {
+    color: white; /*#F48345;*/
+    background-color: #004b8d;
+    border-color: #004b8d;
+    outline: 0; /* removes focus outline*/
+}
+
+    a.fg-button:hover, input[type=submit].fg-button:hover {
+        color: white;
+        background-color: #00598d;
+        border-color: #00598d;
+    }
+
+.right-button { /* For Buttons in Panel Headers that float to right*/
+    float: right !important;
+    margin-right: 2px;
+    /*margin-top: 3px;*/
+}
+
+.transparent, input[type=submit].fg-button {
+    background-color: transparent !important;
+    border-color: transparent !important;
+    color: white !important;
+    outline: 0; /* removes focus outline*/
+}
+
+    .transparent:hover, input[type=submit].fg-button:hover {
+        color: white !important;
+        border-color: #00598d !important;
+        background-color: #00598d !important;
+    }
+
+.right-image { /* For images (open/close) in Panel Headers that float to right*/
+    float: right !important;
+}
+
+.cpe, cpe:hover {
+    color: white !important;
+}
+
+.panel-guidelines {
+    border-color: #118acb;
+}
+
+    .panel-guidelines > .panel-heading {
+        color: white;
+        background-color: #118acb;
+        background-image: none;
+    }
+
+    .panel-guidelines > .panel-body {
+        background-color: #f5f5f5;
+    }
+
+.panel-search {
+    border-color: #429aa4;
+}
+
+    .panel-search > .panel-heading {
+        color: white;
+        background-color: #429aa4;
+        background-image: none;
+    }
+
+    .panel-search > .panel-body {
+        background-color: #f5f5f5;
+    }
+
+.panel-addupdate {
+    border-color: #2dccbb;
+}
+
+    .panel-addupdate > .panel-heading {
+        color: white;
+        background-color: #2dccbb;
+        background-image: none;
+    }
+
+    .panel-addupdate > .panel-body {
+        background-color: #f5f5f5;
+    }
+
+.panel-email {
+    border-color: #6fd6a5;
+}
+
+    .panel-email > .panel-heading {
+        color: white;
+        background-color: #6fd6a5;
+        background-image: none;
+    }
+
+    .panel-email > .panel-body {
+        background-color: #f5f5f5;
+    }
+
+.panel-gridview {
+    border-color: #5f859d;
+}
+
+    .panel-gridview > .panel-heading {
+        background-color: #5f859d;
+        background-image: none;
+    }
+
+    .panel-gridview > .panel-body {
+        background-color: #f5f5f5;
+    }
+
+.panel-primary {
+    border-color: #f5f5f5;
+}
+
+    .panel-primary > .panel-heading {
+        background-color: #5f859d;
+        background-image: none;
+        border-color: #5f859d;
+    }
+
+    .panel-primary > .panel-body {
+        background-color: #f5f5f5;
+    }
+
+.has-button { /* For Panels containing buttons*/
+    padding: 0px;
+    height: 43px;
+}
+
+.panel a {
+    text-decoration: none;
+}
+
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    padding-top: 4px;
+}
+
+.control-label {
+    padding-top: 15px;
+}
+
+.form-control {
+    display: inline;
+}
+
+.no-float {
+    float: none !important;
+}
+
+.gridViewDiv {
+    overflow-y: hidden;
+    position: relative;
+    overflow: auto;
+    width: 100%;
+}
+
+/* AJAX dialog */
+#progressBackgroundFilter {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    background-color: #000;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+    z-index: 1000;
+}
+
+#processMessage {
+    border: medium solid #263E6C;
+    text-align: center;
+    position: relative;
+    width: 150px;
+    height: 60px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin: -30px auto auto -75px;
+    z-index: 1001;
+    background-color: #fff;
+    border-radius: 7px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+}
+/*end*/
+
+/* Menu Styles */
+#tvMainMenu {
+    margin-top: -65px;
+    margin-bottom: 30px;
+    overflow-x: hidden;
+}
+
+    #tvMainMenu > div {
+        margin-left: -40px;
+        margin-top: 0px;
+    }
+
+        #tvMainMenu > div > table > tbody > tr > td > a {
+            padding-top: 4px;
+        }
+
+            #tvMainMenu > div > table > tbody > tr > td > a > img {
+                height: 20px;
+                width: 185px;
+            }
+
+    #tvMainMenu > table > tbody > tr > td.node-style {
+        pointer-events: none;
+    }
+
+.node-style {
+    position: relative;
+    left: -89px;
+    top: 9px;
+    display: block;
+    text-indent: 0px;
+    white-space: initial;
+}
+
+.leaf-style {
+    top: 0px;
+    left: -85px;
+}
+
+a.leaf-style.node-style:hover {
+    color: #F48345 !important;
+}
+
+div#tvMainMenu > div > table > tbody > tr > td > a {
+    width: 190px;
+    margin-left: -20px;
+    padding-left: 20px;
+}
+
+    div#tvMainMenu > div > table > tbody > tr > td > a:hover {
+        color: #F48345 !important;
+    }
+/* end Menu */
+
+/* Doyle CSS for Progress Bar */
+.six-sec-ease-in-out {
+    -webkit-transition: width 6s ease-in-out;
+    -moz-transition: width 6s ease-in-out;
+    -ms-transition: width 6s ease-in-out;
+    -o-transition: width 6s ease-in-out;
+    transition: width 6s ease-in-out;
+}
+
+/* Awesomeness Text CSS*/
+.awesome {
+    width: 100%;
+    padding: 0px;
+    background-color: transparent;
+    transform: translate3d(-300px, 20px, 2000px) rotateY(-180deg);
+    transition-property: all;
+    transition-duration: 5s;
+}
+
+.outerAwesome {
+    width: 100%;
+    height: auto;
+    perspective: 2300px;
+}
+
+.transition {
+    transform: translate3d( 0px, 0px, 0px);
+}
+
+/* Doyle end */
+
+
+.radio input[type="radio"],
+.radio-inline input[type="radio"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+    position: absolute;
+    margin-top: 4px;
+    margin-left: -20px;
+    width: 13px;
+}
+
+.btn-align {
+    left: 135px;
+    top: 6px;
+}
+
+.user-errorMsg-align {
+    position: relative;
+    top: 13px;
+    left: -75px;
+}
+
+.listbox {
+    height: 300px !important;
+    width: 250px !important;
+    margin-left: 15px;
+    position: relative !important;
+}
+
+/*.listbox2 {
+    height: 300px !important;
+    width: 250px !important;
+    margin-left: inherit;
+    right: -320px;
+    position: relative !important;
+    margin-top: -320px;
+}*/
+
+.listboxselectallbutton {
+    position: absolute;
+    margin-left: 40px;
+    margin-top: 75px;
+    width: 130px;
+}
+
+.listboxclearallbutton {
+    position: absolute;
+    margin-left: 40px;
+    margin-top: 140px;
+    width: 130px;
+}
+
+/*
+ * Component: Direct Chat
+ * ----------------------
+ */
+.direct-chat .box-body {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    position: relative;
+    overflow-x: hidden;
+    padding: 0;
+}
+
+.direct-chat.chat-pane-open .direct-chat-contacts {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+
+.direct-chat-messages {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+    padding: 10px;
+    height: 200px;
+    overflow: auto;
+}
+
+.direct-chat-msg,
+.direct-chat-text {
+    display: block;
+}
+
+.direct-chat-msg {
+    margin-bottom: 10px;
+}
+
+    .direct-chat-msg:before,
+    .direct-chat-msg:after {
+        content: " ";
+        display: table;
+    }
+
+    .direct-chat-msg:after {
+        clear: both;
+    }
+
+.direct-chat-messages,
+.direct-chat-contacts {
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;
+    -moz-transition: -moz-transform 0.5s ease-in-out;
+    -o-transition: -o-transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+}
+
+.direct-chat-text {
+    border-radius: 5px;
+    position: relative;
+    padding: 5px 10px;
+    background: #d2d6de;
+    border: 1px solid #d2d6de;
+    margin: 5px 0 0 50px;
+    color: #444444;
+}
+
+    .direct-chat-text:after,
+    .direct-chat-text:before {
+        position: absolute;
+        right: 100%;
+        top: 15px;
+        border: solid transparent;
+        border-right-color: #d2d6de;
+        content: ' ';
+        height: 0;
+        width: 0;
+        pointer-events: none;
+    }
+
+    .direct-chat-text:after {
+        border-width: 5px;
+        margin-top: -5px;
+    }
+
+    .direct-chat-text:before {
+        border-width: 6px;
+        margin-top: -6px;
+    }
+
+.right .direct-chat-text {
+    margin-right: 50px;
+    margin-left: 0;
+}
+
+    .right .direct-chat-text:after,
+    .right .direct-chat-text:before {
+        right: auto;
+        left: 100%;
+        border-right-color: transparent;
+        border-left-color: #d2d6de;
+    }
+
+.direct-chat-img {
+    border-radius: 50%;
+    float: left;
+    width: 40px;
+    height: 40px;
+}
+
+.right .direct-chat-img {
+    float: right;
+}
+
+.direct-chat-info {
+    display: block;
+    margin-bottom: 2px;
+    font-size: 12px;
+}
+
+.direct-chat-name {
+    font-weight: 600;
+}
+
+.direct-chat-timestamp {
+    color: #999;
+}
+
+.direct-chat-contacts-open .direct-chat-contacts {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+
+.direct-chat-contacts {
+    -webkit-transform: translate(101%, 0);
+    -ms-transform: translate(101%, 0);
+    -o-transform: translate(101%, 0);
+    transform: translate(101%, 0);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 250px;
+    width: 100%;
+    background: #222d32;
+    color: #fff;
+    overflow: auto;
+}
+
+.box {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.box-inner {
+    border: 1px solid #DEDEDE;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    box-shadow: 0 0 10px rgba(189, 189, 189, 0.4);
+    -webkit-box-shadow: 0 0 10px rgba(189, 189, 189, 0.4);
+    -moz-box-shadow: 0 0 10px rgba(189, 189, 189, 0.4);
+}
+
+.box-header {
+    border: none;
+    padding-top: 5px;
+    border-bottom: 1px solid #DEDEDE;
+    border-radius: 3px 3px 0 0;
+    -webkit-border-radius: 3px 3px 0 0;
+    -moz-border-radius: 3px 3px 0 0;
+    height: 35px;
+    min-height: 35px !important;
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 16px;
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(0, 0, 0, 0.1)));
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.1) 100%);
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.1) 100%);
+    background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.1) 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#1a000000', GradientType=0);
+}
+
+    .box-header h2 {
+        font-size: 15px;
+        width: auto;
+        clear: none;
+        float: left;
+        line-height: 25px;
+        white-space: nowrap;
+        font-weight: bold;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .box-header h3 {
+        font-size: 13px;
+        width: auto;
+        clear: none;
+        float: left;
+        line-height: 25px;
+        white-space: nowrap;
+    }
+
+    .box-header h2 > i {
+        margin-top: 1px;
+    }
+
+.box-icon {
+    float: right;
+}
+
+    .box-icon a {
+        clear: none;
+        float: left;
+        margin: 0 2px;
+        height: 20px;
+        width: 5px;
+        margin-top: 1px;
+    }
+
+        .box-icon a i {
+            margin-left: -6px;
+            top: -1px;
+        }
+
+.box-content {
+    padding: 10px;
+}
+
+.top-block {
+    border-radius: 20px;
+    font-size: 14px;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    position: relative;
+    display: block;
+    line-height: 22px;
+    text-shadow: 0 0 1px #DDD;
+    text-decoration: none;
+    -webkit-box-shadow: inset 0 0 0 1px #FAFAFA;
+    -moz-box-shadow: inset 0 0 0 1px #FAFAFA;
+    box-shadow: inset 0 0 0 1px #FAFAFA;
+    background: -moz-linear-gradient(top, rgba(30, 87, 153, 0.2) 0%, rgba(125, 185, 232, 0) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(30, 87, 153, 0.2)), color-stop(100%, rgba(125, 185, 232, 0)));
+    background: -webkit-linear-gradient(top, rgba(30, 87, 153, 0.2) 0%, rgba(125, 185, 232, 0) 100%);
+    background: -o-linear-gradient(top, rgba(30, 87, 153, 0.2) 0%, rgba(125, 185, 232, 0) 100%);
+    background: -ms-linear-gradient(top, rgba(30, 87, 153, 0.2) 0%, rgba(125, 185, 232, 0) 100%);
+    background: linear-gradient(to bottom, rgba(30, 87, 153, 0.2) 0%, rgba(125, 185, 232, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#331e5799', endColorstr='#007db9e8', GradientType=0);
+}
+
+    .top-block span {
+        clear: both;
+    }
+
+    .top-block i {
+        font-size: 25px;
+    }
+
+    .top-block:hover {
+        text-decoration: none;
+    }
+
+.top-blockBonz {
+    border-radius: 7px;
+    font-size: 14px;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+    line-height: 27px;
+    text-shadow: 0 0 1px #DDD;
+    text-decoration: none;
+    -webkit-box-shadow: inset 0 0 0 1px #FAFAFA;
+    -moz-box-shadow: inset 0 0 0 1px #FAFAFA;
+    box-shadow: inset 0 0 0 1px #FAFAFA;
+    background: -moz-linear-gradient(top, rgba(30, 87, 153, 0.2) 0%, rgba(125, 185, 232, 0) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(30, 87, 153, 0.2)), color-stop(100%, rgba(125, 185, 232, 0)));
+    background: -webkit-linear-gradient(top, rgba(30, 87, 153, 0.2) 0%, rgba(125, 185, 232, 0) 100%);
+    background: -o-linear-gradient(top, rgba(30, 87, 153, 0.2) 0%, rgba(125, 185, 232, 0) 100%);
+    background: -ms-linear-gradient(top, rgba(30, 87, 153, 0.2) 0%, rgba(125, 185, 232, 0) 100%);
+    background: linear-gradient(to bottom, rgba(30, 87, 153, 0.2) 0%, rgba(125, 185, 232, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#331e5799', endColorstr='#007db9e8', GradientType=0);
+}
