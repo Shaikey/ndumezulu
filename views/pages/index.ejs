@@ -91,7 +91,7 @@
 					<% products.forEach(function(doc) { %>
 						<% if (doc.P_Tag == 'Latest') { %>
 							<div class="col-md-4 product simpleCart_shelfItem text-center">
-								<a href="item?name=<%= doc.P_Item %>"><img src="images/index/<%= doc.P_Item %>.jpg" alt="" /></a>
+								<a href="item?name=<%= doc.P_Item %>"><img src="images/index/<%= doc.P_Item %>.png" alt="" /></a>
 								<div class="mask">
 									<a href="item?name=<%= doc.P_Item %>">Quick View</a>
 								</div>
@@ -114,7 +114,7 @@
 					<% products.forEach(function(doc) { %>
 						<% if (doc.P_Tag == 'Featured') { %>
 							<li>
-								<a href="item?name=<%= doc.P_Item %>"><img src="images/index/<%= doc.P_Item %>.jpg" class="img-responsive" alt="" /></a>
+								<a href="item?name=<%= doc.P_Item %>"><img src="images/index/<%= doc.P_Item %>.png" class="img-responsive" alt="" /></a>
 								<div class="product liked-product simpleCart_shelfItem">
 									<a class="like_name" href="item?name=<%= doc.P_Item %>"><%= doc.P_Name %>.</a>
 									<p><a class="item_add" href="#"><i></i> <span class=" item_price">R<%= doc.P_Price %>.</span></a></p>

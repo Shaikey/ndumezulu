@@ -134,7 +134,7 @@ $(document).ready(function(){
 									<div class="close' + key + '"></div>\
 									<div class="cart-sec simpleCart_shelfItem">\
 										<div class="cart-item cyc">\
-											<img src="images/index/' + response[index].P_Item + '.jpg" class="img-responsive" alt="">\
+											<img src="images/index/' + response[index].P_Item + '.png" class="img-responsive" alt="">\
 										</div>\
 										<div class="cart-item-info">\
 											<h3><a href="#">' + response[index].P_Name + '</a><span>' + response[index].P_Desc + '</span></h3>\
@@ -202,7 +202,7 @@ $(document).ready(function(){
 								<div class="view view-first">\
 									<div class="inner_content clearfix">\
 										<div class="product_image">\
-											<img src="images/index/' + value.P_Item + '.jpg" class="img-responsive" alt=""/>\
+											<img src="images/index/' + value.P_Item + '.png" class="img-responsive" alt=""/>\
 											<div class="mask"><div class="info">Quick View</div></div>\
 											<div class="product_container"><div class="cart-left">\
 												 <p class="title">' + value.P_Name + '</p></div>\
