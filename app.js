@@ -18,8 +18,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 
-//mongoose.connect('mongodb://127.0.0.1/boutiqueDB');
-//const mongoURI = 'mongodb://127.0.0.1/boutiqueDB'; //mongodb+srv://<username>:<password>@boutiquedb.y6u9b1k.mongodb.net/?retryWrites=true&w=majority
+// mongoose.connect('mongodb://127.0.0.1/boutiqueDB');
+// const mongoURI = 'mongodb://127.0.0.1/boutiqueDB'; //mongodb+srv://<username>:<password>@boutiquedb.y6u9b1k.mongodb.net/?retryWrites=true&w=majority
 mongoose.connect('mongodb+srv://userAdmin:Mnqobi0805@boutiquedb.4ulazw4.mongodb.net/?retryWrites=true&w=majority'); //"mongodb://127.0.0.1/boutiqueDB");
 const mongoURI = 'mongodb+srv://userAdmin:Mnqobi0805@boutiquedb.4ulazw4.mongodb.net/?retryWrites=true&w=majority'; //'mongodb://127.0.0.1/boutiqueDB';
 

@@ -253,7 +253,8 @@ $(document).ready(function(){
 	});
 	
 	//$('#passLog').onchange(function () {
-	$(document).on('change', '#passLog', function(e) {
+	//$(document).on('change', '#passLog', function(e) {
+	$('#passLog').on('input',function(e){
 		var mail = $('#passLog').val();
 		var idDpt = 'Admin';
 		var $dropdown = $('.input-group-btn .dropdown-toggle');
@@ -279,6 +280,10 @@ $(document).ready(function(){
 				}
 			}
         });
+	});
+	
+	$('#search-theme-form').on('click', function(){
+		
 	});
 	
 	// + 2 cart 
